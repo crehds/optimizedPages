@@ -1,0 +1,5 @@
+Breakpoints estandarizados que debemos de tener en cuenta:
+
+Móviles: entre 320 y 480 píxeles.
+Tablets: entre 768 y 1024 píxeles.
+Pantallas grandes: más de 1024 píxeles o más.
