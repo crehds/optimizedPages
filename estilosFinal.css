@@ -51,7 +51,7 @@ h1 {
   font-family: 'Fjalla One', sans-serif;
 }
 
-.project title {
+.project-title {
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -87,11 +87,18 @@ h2 {
   padding: 20px;
 }
 .project-details {
-  width: 500px;
+  /* Se modifica el tamaño fijo de 500px */
+  width: 50%;
 }
 
 .project-imageContainer {
-  width: 500px;
+  /* Se modifica el tamaño fijo de 500px */
+  width: 50%;
+}
+
+.project-imageContainer img {
+  /* Para que se autoescale al espacio donde se encuentra */
+  max-width: 100%;
 }
 
 .header {
@@ -171,8 +178,10 @@ ul {
 
 
 .event {
-  margin: 10px;
-  width: 480px;
+  /* Responsiveando la seccion de eventos */
+  /* Se cambio a 1+48+1+1+48+1 = 100% */
+  margin: 1%;
+  width: 48%;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
@@ -285,9 +294,13 @@ ul {
 }
 
 
+
+
 /* Desktop first */
 @media screen and (max-width:1024px) { /*breakpoint*/
-
+  .container {
+    padding: 0 1em; 
+  }
 }
 
 /* Un pixel abajo del tamaño dek ipad(768px)  pues hasta en ipad se aprecia de manera correcta la página*/
@@ -307,18 +320,87 @@ ul {
     /* Se visualiza que la etiqueta "a" deja de ocupar todo el espacio disponible
     text-align: center */
   }
-}
-.header  a {
-  /* Resolviendo el comentario anterior */
-  justify-content: center;
-}
-.header .logo {
-  text-align: center;
-}
+  .header  a {
+    /* Resolviendo el comentario anterior */
+    justify-content: center;
+  }
+  .header .logo {
+    text-align: center;
+  }
+  /* Siempre es mejor tener definidos block y auto(width) para tener mayor rendimiento */
+  .project {
+    display:block;
+  }
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+  /* Se usará em para establecer tamaños de letra */
+  .project-details {
+    width: auto;
+    /* Sino se define, el valor por defecto será 16px */
+    /* font-size: 10px; */
+  }
+  .project-course, .project-date, .project-url {
+    margin: .3em 0;
+  }
 
+  .project-title {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+  .project-url {
+    font-size: 1em;
+  }
+  .project-course {
+    font-size: .7em;
+  }
+  .project-date {
+    font-size: 1em;
+  }
+  .project-description {
+    font-size: 0.8em;
+  }
+
+  .event {
+    width: auto;
+    flex-shrink: initial;
+  }
+  .event img {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 480px) { /*breakpoint*/
+  .project-details {
+    font-size: 12px;
+  }
 
+  .event-detail {
+    /* Como no se manipulo el font-size, el tamaño por defecto será de 16px */
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+
+  .contact {
+    height: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    display: block;
+  }
+
+  .form-email button {
+    margin: 1em auto;
+  }
+
+  .form-email h3 {
+    margin-top: 0;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
 }
 
 @media screen and (max-width: 320px) { /*breakpoint*/
