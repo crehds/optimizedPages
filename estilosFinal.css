@@ -299,7 +299,28 @@ ul {
 /* Desktop first */
 @media screen and (max-width:1024px) { /*breakpoint*/
   .container {
-    padding: 0 1em; 
+    padding: 0 1em;
+  }
+  .hero {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+  .hero-image {
+    /* Recordar que las posiciones absolutas necesitan una posición relativa para referenciar su alcance */
+    position: absolute;
+    z-index: 1;
+    /* Para que la imagen se expanda todo lo que pueda */
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 100%;
+  }
+  h1 {
+    font-size: 2em;
+    z-index: 2;
   }
 }
 
@@ -372,6 +393,9 @@ ul {
 }
 
 @media screen and (max-width: 480px) { /*breakpoint*/
+  h1 {
+    font-size: 1.5em;
+  }
   .project-details {
     font-size: 12px;
   }
@@ -404,5 +428,19 @@ ul {
 }
 
 @media screen and (max-width: 320px) { /*breakpoint*/
-
+  h1 {
+    font-size: 1.2em;
+    /* Aporte de compañero para definir una sombra no muy pronunciada */
+    text-shadow: 1px 2px 2px #000;
+    /* Si se quiere visualizar mejor el texto */
+    /* background: rgba(0,0,0,0.5) */
+  }
+  .hero {
+    padding: 2em 1em;
+  }
+  .hero img {
+    /*Aporte de compañero*/
+    /* Para distorsonar un poco la imagen, estableciendo como prioridad el texto */
+    filter: opacity(80%) blur(1px);
+  }
 }
