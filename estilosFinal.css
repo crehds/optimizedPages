@@ -55,13 +55,16 @@
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 3;
+  line-height: 1;
   /* Líneas agregadas por mi */
   text-decoration: none;
   font-size: 50px;
   color: white;
-  margin:0 10px;
-
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  margin:5px 9px 5px 9px;
+  /* display:block; */
 
 
   /* Better Font Rendering =========== */
@@ -165,6 +168,7 @@ h2 {
 
 .hero-image {
   object-fit: cover;
+  width: auto;
 }
 
 .portfolio {
@@ -303,7 +307,7 @@ ul {
 .contact {
   background-color: #056fff;
   color: white;
-  height: 150px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -403,7 +407,13 @@ ul {
 
 
 /* Desktop first */
-@media screen and (max-width:1024px) { /*breakpoint*/
+@media screen and (max-width:1023px) { /*breakpoint*/
+  .event-list-title {
+    margin-left: 0;
+  }
+  .portfolio {
+    padding: 0px;
+  }
   .container {
     padding: 0 1em;
   }
@@ -428,6 +438,10 @@ ul {
     font-size: 2em;
     z-index: 2;
   }
+  /* .contact {
+    height: auto;
+    justify-content: space-between;
+  } */
 }
 
 .html-video {
@@ -461,6 +475,10 @@ ul {
   /* body {
     border: 10px solid green;
   } */
+  h2 {
+    font-size: 1em;
+    margin: .5em 0;
+  }
   .burger-button {
     display: block;
   }
@@ -542,7 +560,7 @@ ul {
     font-size: 1em;
   }
   .project-description {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .event {
@@ -552,14 +570,26 @@ ul {
   .event img {
     width: 100%;
   }
+  .contact {
+    justify-content: space-between;
+    padding: 1.5em 0;
+    /* text-align: center; */
+    display: flex;
+  }
+  .form-email button {
+    margin: 1em;
+  }
+  .form-email h3 {
+    margin-top: 0;
+  }
 }
 
-@media screen and (max-width: 480px) { /*breakpoint*/
+@media screen and (max-width: 580px) { /*breakpoint*/
   h1 {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   .project-details {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .event-detail {
@@ -570,15 +600,13 @@ ul {
 
   .contact {
     height: auto;
-    padding: 1.5em 0;
+    /* padding: 1.5em 0; */
     text-align: center;
     display: block;
   }
-
   .form-email button {
     margin: 1em auto;
   }
-
   .form-email h3 {
     margin-top: 0;
   }
@@ -586,6 +614,9 @@ ul {
     display: block;
     text-align: center;
     border: 1px solid transparent;
+  }
+  .container {
+    height: auto;
   }
 }
 
