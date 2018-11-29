@@ -276,6 +276,7 @@ ul {
   overflow: hidden;
   flex-shrink: 0;
   background: #f4fbff;
+  z-index: 2;
 }
 
 .event img {
@@ -291,6 +292,7 @@ ul {
   position: relative;
   padding: 20px;
   text-align: center;
+  z-index: 1;
 }
 
 .event-description {
@@ -448,7 +450,8 @@ ul {
 .html-video {
   width: 100%;
   height: auto;
-  max-width: 100%;
+  /* max-width: 100%; */
+  /* position: relative; */
 }
 
 .youtube-video {
