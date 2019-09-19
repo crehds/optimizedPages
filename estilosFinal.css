@@ -408,6 +408,10 @@ ul {
   justify-content: center; */
 }
 
+/**/
+#eventos > div:nth-last-of-type(2) {
+  margin-top: 80px;
+}
 
 /* Desktop first */
 @media screen and (max-width:1023px) { /*breakpoint*/
