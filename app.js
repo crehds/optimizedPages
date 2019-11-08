@@ -2,7 +2,7 @@ const ipad = window.matchMedia('screen and (max-width: 767px)');
 const menu = document.querySelector('.menú');
 const burguerButton = document.querySelector('#burguer-menu');
 console.log(burguerButton);
-ipad.addListener(validation);//Método propio de un ipad
+ipad.addListener(validation);// Método propio de un ipad
 
 // Función para agregar y ocultar el menú
 function validation(event) {
